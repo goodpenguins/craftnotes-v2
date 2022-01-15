@@ -74,6 +74,9 @@ $theme-colors: map-merge($theme-colors, $custom-colors); */
 // common styles
 @import "theme/common";
 
+// global styles
+@import "theme/global";
+
 // snippets
 @import "theme/snippets/snippets";
 

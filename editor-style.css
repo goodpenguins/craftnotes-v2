@@ -1,0 +1,42 @@
+/* .editor-styles-wrapper {
+    font-family: 'Nunito' !important;
+} */
+
+
+/* Layout */
+
+/* Main column width */
+.wp-block {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Width of "wide" blocks */
+.wp-block[data-align='wide'] {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Width of "full-wide" blocks */
+.wp-block[data-align='full'] {
+    max-width: none;
+}
+
+.is-reusable {
+    max-width: none !important;
+}
+
+
+
+.wp-block-list {
+    padding-left: 20px !important;
+}
+.wp-block-list li {
+    list-style-position: outside;
+}
+
+.wp-block-image img {
+    height: auto;
+}

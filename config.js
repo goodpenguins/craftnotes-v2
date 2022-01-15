@@ -4,7 +4,7 @@ const paths = {
 	css: 'assets/css/',
 	scripts: 'assets/js/',
 	html: '',
-	domain: 'yourdomain' // your local domain, e.g. http://local.mysite; required for local development (browserSync) and for generate critical CSS
+	domain: 'craftnotes' // your local domain, e.g. http://local.mysite; required for local development (browserSync) and for generate critical CSS
 }
 
 // browserSync

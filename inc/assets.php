@@ -36,15 +36,24 @@ if ( ! is_admin() ) {
 }
 
 /**
- * Remove gutenberg block assets.
+ * Gutenberg settings.
  *
- * @since starter 1.0
  */
-function starter_remove_block_library_css() {
-	wp_dequeue_style( 'wp-block-library' );
-	wp_dequeue_style( 'wp-block-library-theme' );
+function gutenberg_settings() {
+
+    add_theme_support( 'responsive-embeds' );
+    add_theme_support( 'automatic-feed-links' );
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'wp-block-styles' );
+    add_theme_support( 'editor-styles' );
+    add_editor_style( 'editor-style.css' );
+    add_theme_support( 'dark-editor-style' );
+    add_theme_support( 'align-wide' );
+
+    // remove_theme_support( 'core-block-patterns' );
+    // remove_theme_support( 'block-templates' );
 }
-add_action( 'wp_enqueue_scripts', 'starter_remove_block_library_css' );
+add_action( 'after_setup_theme', 'gutenberg_settings' );
 
 /**
  * Enqueues scripts.
