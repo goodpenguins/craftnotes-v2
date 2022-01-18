@@ -16,12 +16,11 @@
 
 get_header(); ?>
 
-<div class="content_wrapper container my-5 py-5 js_wrap_post_archive" role="main">
+<div class="content_wrapper container pt-5 pb-5 js_wrap_post_archive" role="main">
 
 	<?php
 	if ( ! is_front_page() ) {
-		the_archive_title( '<h1>', '</h1>' );
-	}
+		the_archive_title( '<h1>', '</h1>' ); }
 	?>
 	<div class="row wrap_posts">
 		<?php
@@ -38,7 +37,7 @@ get_header(); ?>
 									starter_img_func(
 										array(
 											'img_src'   => 'w600',
-											'img_sizes' => '(max-width: 575px) calc(100vw - 10px), (max-width: 767px) 258px, (max-width: 991px) 334px, (max-width: 1199px) 294px, (max-width: 1399px) 354px, 414px',
+											'img_sizes' => '(max-width: 575px) calc(100vw - 26px), (max-width: 767px) 244px, (max-width: 991px) 334px, (max-width: 1199px) 294px, (max-width: 1399px) 354px, 414px',
 											'img_id'    => get_post_thumbnail_id(),
 										)
 									),
@@ -52,9 +51,7 @@ get_header(); ?>
 					</a>
 				</article>
 
-				<?php
-		endwhile;
-			?>
+			<?php endwhile; ?>
 	</div>
 
 			<?php

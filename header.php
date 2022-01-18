@@ -23,13 +23,14 @@
 
 <body id="topPage" <?php body_class(); ?>>
 <a href="#topPage" class="scrollup js_scrollto" role="button" aria-label="<?php esc_attr_e( 'Scroll to top', 'starter' ); ?>">
-	<?php echo starter_get_svg( array( 'icon' => 'arrow-up' ) ); ?>
+	<?php echo starter_get_svg( array( 'icon' => 'bi-arrow-up' ) ); ?>
 </a>
+
 <div class="main_wrap">
 	<header class="main_header">
 		<!-- TOP NAV AREA -->
 			<?php if ( has_nav_menu( 'header_top_nav' ) ) : ?>
-				<div class="header_top_nav p-1">
+				<div class="header_top_nav border-bottom p-1">
 					<div class="container">
 						<nav aria-label="<?php esc_attr_e( 'Header Top Nav', 'starter' ); ?>">
 							<?php
@@ -63,7 +64,7 @@
 
 		<!-- MAIN NAV AREA -->
 			<?php if ( has_nav_menu( 'header_main_nav' ) ) : ?>
-				<div class="header_main_nav p-3">
+				<div class="header_main_nav border-bottom p-3">
 					<div class="container">
 						<nav aria-label="<?php esc_attr_e( 'Header Main Nav', 'starter' ); ?>">
 							<?php

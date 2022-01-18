@@ -82,16 +82,8 @@ if ( '' === get_option( 'permalink_structure' ) ) {
 <input class="js_archive_url" type="hidden" value="<?php echo esc_url( $starter_archive_url ); ?>">
 <!-- filters - get canonical URL -->
 
-<?php
-$starter_search_page = '';
-if ( is_search() ) {
-	$starter_search_page = ' search_page';
-}
-?>
-
-
 <div id="content"
-class="content_wrapper archive_product js_wrap_archive <?php echo esc_attr( $starter_search_page ); ?>"
+class="content_wrapper archive_product js_wrap_archive" 
 role="main">
 
 <div class="entry-content">
@@ -142,7 +134,7 @@ role="main">
 						<a href="<?php echo esc_url( $starter_archive_url ); ?>" class="btn btn-outline-primary btn-sm d-none filter_reset_btn js_reset_filters" role="button"><?php esc_html_e( 'Reset', 'starter' ); ?></a>
 					</div>
 				</div>
-				<a href="#filtersSection" class="Filters filter_block mobile_filters_btn" data-bs-toggle="offcanvas" role="button"><?php esc_html_e( 'Filters', 'starter' ); ?><span class="ml-1 notifications_text badge rounded-pill bg-dark js_all_selected_filter"></span></a>
+				<a href="#" class="Filters filter_block mobile_filters_btn" data-bs-target=".js_filter_section" data-bs-toggle="offcanvas" role="button"><?php esc_html_e( 'Filters', 'starter' ); ?><span class="ml-1 notifications_text badge rounded-pill bg-dark js_all_selected_filter"></span></a>
 			<?php endif; ?>
 		<!-- END filters layout -->
 
