@@ -1,4 +1,35 @@
 .main_header {
 	// Silence is golden.
 	// Please write header's styles here when you need.
+
+	.center>.dropdown-menu {
+
+		& >.menu-item {
+			&:after {
+				// margin: 0;
+			}
+			& >.dropdown-item {
+				font-weight: 600;
+				svg {
+					stroke: currentColor;
+					stroke-width: 2;
+				}
+			}
+			// next level
+			& > .dropdown-menu {
+				//dropdown-menu-center
+					right: auto;
+					left: 50%;
+					transform: translate(-50%, 0);
+				padding: 0 !important;
+				border-radius: 0.1rem !important;
+				& > .menu-item {
+					& > .dropdown-item {
+						justify-content: center !important;
+					}
+				}
+			}
+		}
+	}
+
 }

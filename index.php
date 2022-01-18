@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-<div class="content_wrapper container pt-5 pb-5 js_wrap_post_archive" role="main">
+<div class="content_wrapper container my-5 py-5 js_wrap_post_archive" role="main">
 
 	<?php
 	if ( ! is_front_page() ) {

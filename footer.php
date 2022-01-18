@@ -29,6 +29,23 @@
 		<?php endif; ?>
 	</div>
 </footer>
+
+<!-- Footer bottom image -->
+<?php if ( get_field('footer_bottom_image', 'option') ) : ?>
+  <div class="d-flex justify-content-center ">
+  <picture>
+    <?php 
+      $img = get_field('footer_bottom_image', 'option');
+      echo starter_img_func([
+        'img_src'   => 'w1200',
+        'img_sizes' => '70vw',
+        'img_id'    => $img
+      ]);						
+    ?>
+  </picture>
+  </div>
+<?php endif ?>
+
 </div>
 
 <!-- alert -->

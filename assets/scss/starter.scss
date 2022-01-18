@@ -71,11 +71,11 @@ $theme-colors: map-merge($theme-colors, $custom-colors); */
 // CUSTOM CODE
 @import "theme/mixins/mixins";
 
+// global styles ____
+@import "theme/global";
+
 // common styles
 @import "theme/common";
-
-// global styles
-@import "theme/global";
 
 // snippets
 @import "theme/snippets/snippets";

@@ -1,3 +1,6 @@
+body {
+  background-color: #F9F3DB !important;
+}
 ul {
   padding-left: 20px;
 }
@@ -9,17 +12,22 @@ li {
   margin-left: auto;
   margin-right: auto;
 }
-
 .entry-content>*:not(.alignfull):not(.alignwide) {
   max-width: 960px;
   padding-left: 10px;
   padding-right: 10px;
 }
-
 .entry-content>*.alignwide {
   max-width: 1200px;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.font-default {
+  font-family: var(--wp--preset--font-family--default);
+}
+.font-2 {
+  font-family: var(--wp--preset--font-family--2);
 }
 
 .wp-block-image img {
@@ -29,7 +37,6 @@ li {
 button:focus {
   outline: none !important;
 }
-
 
 figure.wp-block-embed.is-type-video,
 .wp-block-embed__wrapper {
@@ -48,26 +55,6 @@ figure.wp-block-embed.is-type-video iframe {
   height: 100%;
 }
 
-// @include media-breakpoint-down(md) {
-//   .has-extra-small-font-size {
-//     font-size: 10px; //12px
-//   }
-//   .has-small-font-size {
-//     font-size: 12px; //14px
-//   }
-//   .has-normal-font-size {
-//     font-size: 16px; //18px
-//   }
-//   .has-medium-font-size {
-//     font-size: 20px; //24px
-//   }
-//   .has-large-font-size {
-//     font-size: 26px; //32px
-//   }
-//   .has-huge-font-size {
-//     font-size: 36px; //48px
-//   }
-//   .has-gigantic-font-size {
-//     font-size: 100px; //144px
-//   }
-// }
+.kt-row-column-wrap {
+  z-index: unset !important;
+}

@@ -44,11 +44,17 @@
     "typography": {     
       "fontFamilies": [
         {
-          "fontFamily": "\"Monserrat\"",
+          "fontFamily": "\"Montserrat\"",
           "slug": "default",
           "name": "Default",
-          "google": "family=Monserrat:wght@400;500;600;700;900&display=swap"
-        }             
+          "google": "family=Montserrat:wght@400;500;700;900&display=swap"
+        },
+        {
+          "fontFamily": "\"Arvo\"",
+          "slug": "2",
+          "name": "2",
+          "google": "family=Arvo:wght@400;700&display=swap"
+        }                    
       ],      
       "fontSizes": [
         {
@@ -63,12 +69,12 @@
         },
         {
           "slug": "normal",
-          "size": "20px",
+          "size": "18px",
           "name": "Normal"
         },
         {
           "slug": "medium",
-          "size": "28px",
+          "size": "24px",
           "name": "Medium"
         },
         {

@@ -59,7 +59,7 @@ const criticalSrcPages = [
 	},
 	{
 		url: paths.domain,
-		css: 'css/critical/page-home.css'
+		css: 'css/critical/page-landing.css'
 	},
 	{
 		url: paths.domain,

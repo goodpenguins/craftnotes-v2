@@ -29,13 +29,18 @@ require_once get_stylesheet_directory() . '/inc/woocommerce/woocommerce-customiz
 require_once get_stylesheet_directory() . '/inc/woocommerce/filter.php';
 
 /**
+ * Product Tabs
+ */
+require_once get_stylesheet_directory() . '/inc/woocommerce/tabs.php';
+
+/**
  * Remove woo assets
  *
  * @since starter 1.0
  */
 function starter_woocommerce_assets_cleaner() {
 	wp_dequeue_script( 'wc-single-product' );
-	wp_deregister_style( 'wc-blocks-style' );
+	// wp_deregister_style( 'wc-blocks-style' );
 	wp_deregister_style( 'tinvwl-webfont-font' );
 }
 add_action( 'wp_enqueue_scripts', 'starter_woocommerce_assets_cleaner', 99 );

@@ -6,3 +6,7 @@
 
 // hide default widget display type
 .widget-inside [for$="display_type"], .widget-inside select[id$="display_type"] {display: none;}
+
+.post-state {
+  display: none;
+}
