@@ -46,6 +46,63 @@ function starter_remove_block_library_css() {
 }
 // add_action( 'wp_enqueue_scripts', 'starter_remove_block_library_css' );
 
+	$editor_palette = array(
+          [
+            "slug" => "white",
+            "color" => "#ffffff"
+					],        
+          [
+            "slug" => "black",
+            "color" => "#000000"
+					],
+          [
+            "slug" => "siver",
+            "color" => "#cccccc"
+					],          
+          [
+            "slug" => "gray",
+            "color" => "#666666"
+					],          
+          [
+            "slug" => "beige",
+            "color" => "#F9F3DB"
+          ],
+          [
+            "slug" => "red",
+            "color" => "#FE3500"
+          ],
+          [
+            "slug" => "blue",
+            "color" => "#1010F8"
+          ],
+          [
+            "slug" => "beer",
+            "color" => "#FFB600"
+          ],
+          [
+            "slug" => "brand",
+            "color" => "#FE3500"
+					],
+          [
+            "slug" => "violet",
+            "color" => "#5A2D88"
+					]					
+	);
+add_theme_support('editor-color-palette', $editor_palette);
+
+/**
+ * Register block's custom styles.
+ *
+ * @since starter 1.0
+ */
+add_action('init', function() {
+	// core/query
+	register_block_style('core/query', [
+		'name' => 'framed-items',
+		'label' => __('Framed Items', 'txtdomain'),
+	]);
+});
+
 /**
  * Enqueues scripts.
  *

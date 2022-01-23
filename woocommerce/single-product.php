@@ -122,8 +122,9 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
 			<!-- right part -->
 			<div class="col-md-6">
-				<h2><?php the_title(); ?></h2>
-				<h1 class="h6 "><?php echo esc_html( $starter_short_desc ); ?></h1>
+				<h1><?php the_title(); ?></h1>
+				<?php //echo esc_html( $starter_short_desc ); ?>
+				<?php echo $starter_short_desc; ?>
 				<ul class="list single_tool_list">
 					<?php if ( $starter_comment_enabled ) : ?>
 						<?php if ( $starter_comment_count ) : ?>
@@ -204,6 +205,52 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 				<?php endif; ?>
 			</div>
 			<!-- END right part -->
+
+
+			<?php
+			/**
+			 * Product page tabs (ACF).
+			 */
+			$tabs = get_field('product_tabs_group');
+			$tabs_object = get_field_object('product_tabs_group');
+
+			$tabs_label = [];
+			$tabs_content = [];
+
+			foreach( $tabs_object['sub_fields'] as $key=>$tab ) :
+				if ( $key % 2 === 0 ) :
+					// echo $tab['label'];
+					array_push($tabs_label, $tab['label']);
+				else :
+					$name = 'product_' . strtolower($tab['label']);
+					// echo $tabs[$name];
+					array_push($tabs_content, $tabs[$name]);
+				endif;
+			endforeach;
+			?>
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs justify-content-center mt-5" id="myTab" role="tablist">
+			<?php foreach( $tabs_label as $key=>$label ) : 
+				$name = 'product_' . strtolower($label);
+				?>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link <?php echo ($key === 0) ? 'active' : '' ?>" id="<?=$name?>-tab" data-bs-toggle="tab" data-bs-target="#<?=$name?>" type="button" role="tab" aria-controls="<?=$name?>" aria-selected="true"><?=$label?></button>
+				</li>
+			<?php endforeach;	?>
+			</ul>
+
+			<!-- // Tab panes -->
+			<div class="tab-content mb-5">
+				<?php foreach( $tabs_content as $key=>$content ) : 
+					$name = 'product_' . strtolower($tabs_label[$key]);
+					?>	
+					<div class="tab-pane pt-4 <?php echo ($key === 0) ? 'active' : '' ?>" id="<?=$name?>" role="tabpanel" aria-labelledby="<?=$name?>-tab">
+						<?=$content?>
+					</div>
+				<?php endforeach;	?>
+			</div>
+
 
 		</div><!-- row -->
 	</div><!-- container -->

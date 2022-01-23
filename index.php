@@ -14,45 +14,88 @@
  * @since starter 1.0
  */
 
-get_header(); ?>
+get_header();
+$attributes = [
+	'dataset' => '',
+	'format' => '',
+	'perRow' => 3,
+];
+?>
 
-<div class="content_wrapper container pt-5 pb-5 js_wrap_post_archive" role="main">
+<style>
+.Posts {
+	display: grid;
+	grid-template-columns: repeat(<?=$attributes['perRow']?>, 1fr);
+	gap: 1rem;
+}
+@media (max-width: 576px) {
+	.Posts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}    
+</style>
 
-	<?php
-	if ( ! is_front_page() ) {
-		the_archive_title( '<h1>', '</h1>' ); }
-	?>
-	<div class="row wrap_posts">
+
+<div class="content_wrapper py-2 py-lg-5 js_wrap_post_archive" role="main">
+
+	<div class="entry-content">
+
+		<!-- breadcrumb -->
 		<?php
-		if ( have_posts() ) :
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			yoast_breadcrumb( '<div class="alignwide yoast_breadcrumb">', '</div>' );
+		}
+		?>
+		<!-- END breadcrumb -->
 
-			while ( have_posts() ) :
-				the_post();
-				?>
-				<article class="col-sm-6 col-lg-4 mb-4">
-					<a class="card" href="<?php echo esc_url( get_permalink() ); ?>">
-						<picture class="item_img">
-							<?php
-								echo wp_kses(
-									starter_img_func(
-										array(
-											'img_src'   => 'w600',
-											'img_sizes' => '(max-width: 575px) calc(100vw - 26px), (max-width: 767px) 244px, (max-width: 991px) 334px, (max-width: 1199px) 294px, (max-width: 1399px) 354px, 414px',
-											'img_id'    => get_post_thumbnail_id(),
-										)
-									),
-									wp_kses_allowed_html( 'post' )
-								);
-							?>
-						</picture>
-						<div class="card-body">
-							<h2 class="card-text h5 text-uppercase"><?php the_title(); ?></h2>
-						</div>
-					</a>
-				</article>
+		<div class="entry-header alignwide bg-white py-4 py-lg-5 px-lg-0">
+			<?php
+			if ( !is_front_page() ) {
+				the_archive_title( '<h1 class="text-center fw-bold fst-italic mb-3">', '</h1>' ); }
+			?>
+			<?php
+			if ( $cat_desc = category_description() )
+				echo '<div class="has-medium-font-size fw-medium text-center">'. $cat_desc .'</div>';
+			?>
+		</div>
 
-			<?php endwhile; ?>
-	</div>
+		<div class="wp-block-query alignwide is-style-framed-items mt-5 wrap_posts">
+			<ul class="wp-block-post-template columns-<?=$attributes['perRow']?>">
+			<?php
+			if ( have_posts() ) :
+
+				while ( have_posts() ) :
+					the_post();
+					?>
+					<li class="wp-block-post post type-post status-publish format-standard has-post-thumbnail hentry">
+						<a class="" href="<?php echo esc_url( get_permalink() ); ?>">
+							<figure class="alignwide wp-block-post-featured-image">
+								<picture class="">
+									<?php
+										echo wp_kses(
+											starter_img_func(
+												array(
+													'img_src'   => 'w600',
+													'img_sizes' => '(max-width: 575px) calc(100vw - 26px), (max-width: 767px) 244px, (max-width: 991px) 334px, (max-width: 1199px) 294px, (max-width: 1399px) 354px, 414px',
+													'img_id'    => get_post_thumbnail_id(),
+												)
+											),
+											wp_kses_allowed_html( 'post' )
+										);
+									?>
+								</picture>
+							</figure>
+							<h2 class="has-text-align-center has-text-color has-red-color wp-block-post-title has-arvo-font-family"><?php the_title(); ?></h2>
+							<div class="has-text-align-center wp-block-post-excerpt has-medium-font-size">
+								<?php the_excerpt(); ?>
+							</div>
+						</a>
+					</li>
+
+				<?php endwhile; ?>
+		
+			</ul> <!-- .wp-block-post-template -->
+		</div> <!-- .wp-block-query -->
 
 			<?php
 			the_posts_pagination(
@@ -66,6 +109,8 @@ get_header(); ?>
 			);
 		endif;
 		?>
+
+	</div><!-- .entry-content -->
 
 </div><!-- .content_wrapper -->
 

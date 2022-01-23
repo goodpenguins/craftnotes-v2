@@ -13,4 +13,11 @@ html, body {height: 100%;}
 		flex-direction: column;
 	}
 	.sub-menu > li {margin: 3px 0;}
+	@include media-breakpoint-down(lg) {
+		justify-content: center !important;
+		& > * {
+			margin-bottom: 2rem;
+			text-align: center;
+		}
+	}
 }

@@ -121,8 +121,10 @@ function starter_filter_link_markup( $term_html, $term, $link, $count ) {
 	$indicator_color    = '';
 	$color_field_status = get_field( 'color_field_toggler', $term->taxonomy . '_' . $term->term_id );
 	if ( $color_field_status ) {
-		$color           = strtolower( get_field( 'color_taxonomy', $term->taxonomy . '_' . $term->term_id ) );
-		$indicator_color = '<span class="indicator_color" style="background:' . $color . ';"></span>';
+		// $color           = strtolower( get_field( 'color_taxonomy', $term->taxonomy . '_' . $term->term_id ) );
+		// $indicator_color = '<span class="indicator_color" style="background:' . $color . ';"></span>';
+		$bg_class           = strtolower( get_field( 'color_taxonomy', $term->taxonomy . '_' . $term->term_id ) );
+		$indicator_color = '<span class="indicator_color ' .$bg_class. '"></span>';
 	}
 	$term_html = '<a class="form-check" rel="nofollow" href="' . esc_url( $link ) . '">' .
 						'<input class="form-check-input" type="checkbox" aria-label="Filter">' .

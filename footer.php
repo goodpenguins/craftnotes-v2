@@ -13,15 +13,15 @@
 
 ?>
 
-<footer class="main_footer">
-	<div class="container">
+<footer class="main_footer entry-content">
+	<div class="alignwide">
 		<?php if ( has_nav_menu( 'footer_nav' ) ) : ?>
 			<nav aria-label="<?php esc_attr_e( 'Footer Nav', 'starter' ); ?>">
 				<?php
 					wp_nav_menu(
 						array(
 							'theme_location' => 'footer_nav',
-							'menu_class'     => 'list footer_nav',
+							'menu_class'     => 'list align-items-start footer_nav',
 						)
 					);
 				?>

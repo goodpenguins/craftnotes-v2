@@ -15,9 +15,19 @@ get_header();
 while ( have_posts() ) :
 	the_post(); ?>
 
-<div class="content_wrapper single_post_page pt-md-5 pb-5" role="main">
-	<div class="wrap_single_post_content container-fluid">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+<div class="content_wrapper bg-white single_post_page pt-md-5 pb-5" role="main">
+
+	<div class="entry-content wrap_single_post_content">
+
+		<div class="entry-header alignwide bg-white py-4 py-lg-5 px-lg-0">
+			<?php get_template_part('meta-category'); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>			
+			<p class='has-medium-font-size fw-medium text-center has-gray-color'>
+				<?php echo get_the_excerpt(); ?>
+			</p>				
+		</div>
+
+		
 
 		<!-- post image -->
 		<picture>
@@ -37,9 +47,7 @@ while ( have_posts() ) :
 		<!-- END post image -->
 
 		<!-- post content -->
-		<div class="entry-content mt-4">
 			<?php the_content(); ?>
-		</div>
 		<!-- END post content -->
 
 		<!-- post navigation -->
@@ -58,7 +66,8 @@ while ( have_posts() ) :
 			);
 		?>
 		<!-- END post navigation -->
-	</div><!-- .wrap_single_post_content -->
+
+	</div><!-- .entry-content -->
 
 	<?php
 	// If comments are open load up the comment template.

@@ -5,10 +5,6 @@
 	.center>.dropdown-menu {
 
 		&>.menu-item {
-			&:after {
-				// margin: 0;
-			}
-
 			&>.dropdown-item {
 				font-weight: 600;
 
@@ -26,10 +22,19 @@
 				transform: translate(-50%, 0);
 				padding: 0 !important;
 				border-radius: 0.1rem !important;
+				border-width: 0;
+				background-color: $primary;
 
 				&>.menu-item {
+					color: white;
 					&>.dropdown-item {
 						justify-content: center !important;
+						background-color: $primary;
+						color: white;
+						&:hover {
+							background-color: $brand;
+							color: white !important;
+						}
 					}
 				}
 			}

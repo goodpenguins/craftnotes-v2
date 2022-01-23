@@ -11,7 +11,7 @@
  * the readme will list any important changes.
  *
  * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @package WooCommerce\Templates
  * @version 3.4.0
  */
 
@@ -124,7 +124,7 @@ role="main">
 				<?php endif; ?>
 			</div>
 			<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-				<div class="Filters filter_block all_filters offcanvas offcanvas-start" id="filtersSection" aria-labelledby="filtersSectionLabel">
+				<div class="Filters filter_block all_filters offcanvas offcanvas-start js_wrap_filters js_filter_section" aria-labelledby="filtersSectionLabel">
 					<div class="offcanvas-header d-md-none">
 						<h5 class="offcanvas-title" id="filtersSectionLabel">Filters</h5>
 						<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -144,8 +144,8 @@ role="main">
 			while ( have_posts() ) {
 				the_post();
 				global $product;
-				echo "<div class='wraper_product js_product'>";
-				$starter_img_sizes = '(max-width: 575px) calc(50vw - 10px), (max-width: 767px) 260px, (max-width: 991px) 216px, (max-width: 1199px) 216px, (max-width: 1399px) 204px, 240px';
+				echo "<div class='wraper_product'>";
+				$starter_img_sizes = '(max-width: 575px) calc(50vw - 26px), (max-width: 767px) 244px, (max-width: 991px) 214px, (max-width: 1199px) 214px, (max-width: 1399px) 188px, 222px';
 				require get_stylesheet_directory() . '/woocommerce-custom/global/product-item.php';
 				echo '</div>';
 			}

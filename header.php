@@ -30,8 +30,8 @@
 	<header class="main_header">
 		<!-- TOP NAV AREA -->
 			<?php if ( has_nav_menu( 'header_top_nav' ) ) : ?>
-				<div class="header_top_nav border-bottom p-1">
-					<div class="container">
+				<div class="header_top_nav entry-content">
+					<div class="alignwide">
 						<nav aria-label="<?php esc_attr_e( 'Header Top Nav', 'starter' ); ?>">
 							<?php
 								wp_nav_menu(
@@ -64,8 +64,8 @@
 
 		<!-- MAIN NAV AREA -->
 			<?php if ( has_nav_menu( 'header_main_nav' ) ) : ?>
-				<div class="header_main_nav border-bottom p-3">
-					<div class="container">
+				<div class="header_main_nav entry-content p-3">
+					<div class="alignwide">
 						<nav aria-label="<?php esc_attr_e( 'Header Main Nav', 'starter' ); ?>">
 							<?php
 								wp_nav_menu(

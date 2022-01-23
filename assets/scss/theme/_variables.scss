@@ -1,1 +1,12 @@
 $primary:  #000;
+$brand: #FE3500;
+// $colors: (
+//   "brand": $brand,
+// );
+$theme-colors: (
+  "primary": $primary,
+  "brand": $brand,
+);
+
+
+$font-weight-base: 500;
