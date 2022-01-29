@@ -85,11 +85,13 @@ $attributes = [
 									?>
 								</picture>
 							</figure>
-							<h2 class="has-text-align-center has-text-color has-red-color wp-block-post-title has-arvo-font-family"><?php the_title(); ?></h2>
-							<div class="has-text-align-center wp-block-post-excerpt has-medium-font-size">
-								<?php the_excerpt(); ?>
-							</div>
 						</a>
+						<a class="" href="<?php echo esc_url( get_permalink() ); ?>">
+							<h2 class="has-text-align-center has-text-color has-red-color wp-block-post-title has-arvo-font-family"><?php the_title(); ?></h2>
+						</a>
+						<div class="has-text-align-center wp-block-post-excerpt has-medium-font-size">
+							<?php the_excerpt(); ?>
+						</div>
 					</li>
 
 				<?php endwhile; ?>
