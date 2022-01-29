@@ -23,13 +23,13 @@
 				padding: 0 !important;
 				border-radius: 0.1rem !important;
 				border-width: 0;
-				background-color: $primary;
+				background-color: $dark;
 
 				&>.menu-item {
 					color: white;
 					&>.dropdown-item {
 						justify-content: center !important;
-						background-color: $primary;
+						background-color: $dark;
 						color: white;
 						&:hover {
 							background-color: $brand;
