@@ -48,7 +48,7 @@
             "key": "field_5eabe1ad904c6",
             "label": "Color",
             "name": "menu_color",
-            "type": "color_picker",
+            "type": "editor_palette",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -57,15 +57,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "enable_opacity": false,
-            "return_format": "string"
+            "default_value": "black",
+            "exclude_colors": "",
+            "return_format": "color"
         },
         {
             "key": "field_5eabe1d2904c7",
             "label": "Hover color",
             "name": "menu_color_hover",
-            "type": "color_picker",
+            "type": "editor_palette",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -74,9 +74,9 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "enable_opacity": false,
-            "return_format": "string"
+            "default_value": "black",
+            "exclude_colors": "",
+            "return_format": "color"
         },
         {
             "key": "field_5eb677ba82d71",
@@ -163,5 +163,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1641318414
+    "modified": 1642948026
 }

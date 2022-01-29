@@ -21,7 +21,8 @@ while ( have_posts() ) :
 
 		<div class="entry-header alignwide bg-white py-4 py-lg-5 px-lg-0">
 			<?php get_template_part('meta-category'); ?>
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>			
+			<?php the_title( '<h1 class="entry-title ">', '</h1>' ); ?>			
+			<!-- <*?php the_title( '<h1 class="entry-title has-secondary-font-family fst-italic fw-bold text-uppercase">', '</h1>' ); ?>			 -->
 			<p class='has-medium-font-size fw-medium text-center has-gray-color'>
 				<?php echo get_the_excerpt(); ?>
 			</p>				

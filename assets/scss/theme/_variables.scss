@@ -1,12 +1,22 @@
-$primary:  #000;
+$siver: #cccccc;
+$gray: #666666;
+$beige: #F9F3DB;
 $brand: #FE3500;
-// $colors: (
-//   "brand": $brand,
-// );
-$theme-colors: (
-  "primary": $primary,
-  "brand": $brand,
-);
+$blue: #1010F8;
+$beer: #FFB600;
+$viole: #5A2D88;
 
+$primary:  $brand;
+$secondary: black;
+
+// $theme-colors: (
+//   "primary": $primary,
+//   "secondary": $secondary,
+//   "brand": $brand
+// );
 
 $font-weight-base: 500;
+
+$btn-border-radius: 50px;
+$btn-border-radius-sm: 50px;
+$btn-border-radius-lg: 50px;

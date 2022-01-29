@@ -51,7 +51,7 @@ $attributes = [
 		<div class="entry-header alignwide bg-white py-4 py-lg-5 px-lg-0">
 			<?php
 			if ( !is_front_page() ) {
-				the_archive_title( '<h1 class="text-center fw-bold fst-italic mb-3">', '</h1>' ); }
+				the_archive_title( '<h1 class="text-center fw-bold fst-italic has-secondary-font-family mb-3">', '</h1>' ); }
 			?>
 			<?php
 			if ( $cat_desc = category_description() )

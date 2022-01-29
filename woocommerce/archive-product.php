@@ -147,6 +147,7 @@ role="main">
 				echo "<div class='wraper_product'>";
 				$starter_img_sizes = '(max-width: 575px) calc(50vw - 26px), (max-width: 767px) 244px, (max-width: 991px) 214px, (max-width: 1199px) 214px, (max-width: 1399px) 188px, 222px';
 				require get_stylesheet_directory() . '/woocommerce-custom/global/product-item.php';
+				// require get_stylesheet_directory() . '/woocommerce-custom/global/product-toys.php';
 				echo '</div>';
 			}
 				wp_reset_postdata();

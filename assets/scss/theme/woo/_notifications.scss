@@ -1,8 +1,10 @@
 .woocommerce-store-notice {
-	left: 0;
-	position: fixed;
+	order: -1;
 	text-align: center;
-	top: 0;
 	width: 100%;
-	z-index: 5;
+
+	// left: 0;
+	// position: fixed;
+	// top: 0;
+	// z-index: 5;
 }
