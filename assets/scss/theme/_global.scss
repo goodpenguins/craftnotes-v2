@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #F9F3DB !important;
+  color: var(--wp--preset--color--body);
 }
 ul {
   padding-left: 20px;
@@ -21,7 +22,7 @@ $content-spacing: 10px;
   margin-right: auto;
 }
 .entry-content > *:not(.alignfull):not(.alignwide) {
-  max-width: 1080px;
+  max-width: 700px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -159,13 +160,31 @@ figure.wp-block-embed.is-type-video iframe {
 
 
 .wp-block-quote {
-  border-top: 20px solid var(--wp--preset--color-beige) !important;
-
-  margin: 0;
-  padding: 0;
+  position: relative;
+  border-top: 20px solid var(--wp--preset--color--beige) !important;
+  // padding: 0;
   border-left: 0 !important;
   padding-top: 20px !important;
   padding-left: 50px !important;
   margin-bottom: 2em;
-  position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 30px;
+    height: 27px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 26 23' fill='%23FE3500' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.5509 0.358398H17.3009C16.007 0.358398 14.9572 1.4082 14.9572 2.70215V8.95215C14.9572 10.2461 16.007 11.2959 17.3009 11.2959H21.2072V14.4209C21.2072 16.1445 19.8058 17.5459 18.0822 17.5459H17.6915C17.0421 17.5459 16.5197 18.0684 16.5197 18.7178V21.0615C16.5197 21.7109 17.0421 22.2334 17.6915 22.2334H18.0822C22.3986 22.2334 25.8947 18.7373 25.8947 14.4209V2.70215C25.8947 1.4082 24.8448 0.358398 23.5509 0.358398ZM9.4884 0.358398H3.2384C1.94446 0.358398 0.894653 1.4082 0.894653 2.70215V8.95215C0.894653 10.2461 1.94446 11.2959 3.2384 11.2959H7.14465V14.4209C7.14465 16.1445 5.74329 17.5459 4.01965 17.5459H3.62903C2.97961 17.5459 2.45715 18.0684 2.45715 18.7178V21.0615C2.45715 21.7109 2.97961 22.2334 3.62903 22.2334H4.01965C8.33606 22.2334 11.8322 18.7373 11.8322 14.4209V2.70215C11.8322 1.4082 10.7823 0.358398 9.4884 0.358398Z' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+  p {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+  }
+  cite {
+    margin-top: 1em;
+    font-style: normal;
+  }
 }

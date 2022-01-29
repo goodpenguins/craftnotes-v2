@@ -15,36 +15,38 @@ get_header();
 while ( have_posts() ) :
 	the_post(); ?>
 
-<div class="content_wrapper bg-white single_post_page pt-md-5 pb-5" role="main">
+<div class="content_wrapper bg-white pt-md-5 pb-5" role="main">
+	<!-- .single_post_page -->
 
-	<div class="entry-content wrap_single_post_content">
+	<div class="entry-content ">
+		<!-- .wrap_single_post_content -->
 
 		<div class="entry-header alignwide bg-white py-4 py-lg-5 px-lg-0">
 			<?php get_template_part('meta-category'); ?>
-			<?php the_title( '<h1 class="entry-title ">', '</h1>' ); ?>			
+			<?php the_title( '<h1 class="entry-title text-center fw-bold fst-italic has-secondary-font-family mb-3">', '</h1>' ); ?>			
 			<!-- <*?php the_title( '<h1 class="entry-title has-secondary-font-family fst-italic fw-bold text-uppercase">', '</h1>' ); ?>			 -->
 			<p class='has-medium-font-size fw-medium text-center has-gray-color'>
 				<?php echo get_the_excerpt(); ?>
 			</p>				
 		</div>
 
-		
-
 		<!-- post image -->
-		<picture>
-			<?php
-				echo wp_kses(
-					starter_img_func(
-						array(
-							'img_src'   => 'w800',
-							'img_sizes' => '(max-width: 767px) calc(100vw - 24px), 776px',
-							'img_id'    => get_post_thumbnail_id(),
-						)
-					),
-					wp_kses_allowed_html( 'post' )
-				);
-			?>
-		</picture>
+		<div class="entry-thumbnail alignwide mb-5">
+			<picture>
+				<?php
+					echo wp_kses(
+						starter_img_func(
+							array(
+								'img_src'   => 'w1400',
+								'img_sizes' => '(max-width: 767px) calc(100vw - 24px), 1400px',
+								'img_id'    => get_post_thumbnail_id(),
+							)
+						),
+						wp_kses_allowed_html( 'post' )
+					);
+				?>
+			</picture>
+		</div>
 		<!-- END post image -->
 
 		<!-- post content -->

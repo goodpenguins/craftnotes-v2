@@ -56,8 +56,12 @@ function starter_remove_block_library_css() {
             "color" => "#000000"
 					],
           [
+            "slug" => "body",
+            "color" => "#4C4C4C"
+					],          
+          [
             "slug" => "siver",
-            "color" => "#cccccc"
+            "color" => "#CCCCCC"
 					],          
           [
             "slug" => "gray",
@@ -66,10 +70,6 @@ function starter_remove_block_library_css() {
           [
             "slug" => "beige",
             "color" => "#F9F3DB"
-          ],
-          [
-            "slug" => "red",
-            "color" => "#FE3500"
           ],
           [
             "slug" => "blue",

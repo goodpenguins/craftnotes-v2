@@ -12,8 +12,12 @@
             "color": "#000000"
           },
           {
+            "slug": "body",
+            "color": "#4C4C4C"
+          },          
+          {
             "slug": "siver",
-            "color": "#cccccc"
+            "color": "#CCCCCC"
           },          
           {
             "slug": "gray",
@@ -42,7 +46,7 @@
       ]
     },
   	"layout": {
-  		"contentSize": "1080px",
+  		"contentSize": "700px",
   		"wideSize": "1400px"
   	},
     "typography": {     
@@ -112,6 +116,9 @@
       "fontSize": "var(--wp--preset--font-size--normal) !important",
       "fontWeight": "500 !important"
     },
+    "color": {
+      "text": "var(--wp--preset--color--body)"
+    },    
     "elements": {
       "h1": {
         "typography": {
