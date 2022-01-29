@@ -86,7 +86,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'starter_woocommerce_header_add
 function starter_replace_dismiss( $notice ) {
 	$notice = str_replace( 'woocommerce-store-notice__dismiss-link', 'woocommerce-store-notice__dismiss-link btn-close', $notice );
 	$notice = str_replace( 'Dismiss', '<span class="screen-reader-text">Dismiss notification</span>', $notice );
-	return str_replace( 'demo_store', 'alert alert-secondary alert-dismissible', $notice );
+	return str_replace( 'demo_store', 'alert alert-dismissible', $notice );
 }
 add_filter( 'woocommerce_demo_store', 'starter_replace_dismiss' );
 

@@ -9,14 +9,20 @@ $viole: #5A2D88;
 $primary:  $brand;
 $secondary: black;
 
-// $theme-colors: (
-//   "primary": $primary,
-//   "secondary": $secondary,
-//   "brand": $brand
-// );
-
+$spacer: 1rem;
+$font-weight-normal: 400;
 $font-weight-base: 500;
 
 $btn-border-radius: 50px;
 $btn-border-radius-sm: 50px;
 $btn-border-radius-lg: 50px;
+
+$alert-padding-y: $spacer;
+$alert-padding-x: $spacer;
+$alert-margin-bottom: 1rem;
+$alert-border-radius: 0;
+$alert-border-width: 0;
+$alert-bg-scale: 0;
+$alert-color-scale: -100%;
+$alert-dismissible-padding-r: $alert-padding-x * 3; // 3x covers width of x plus default padding on either side
+

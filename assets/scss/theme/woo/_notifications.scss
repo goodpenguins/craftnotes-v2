@@ -2,9 +2,12 @@
 	order: -1;
 	text-align: center;
 	width: 100%;
-
-	// left: 0;
-	// position: fixed;
-	// top: 0;
-	// z-index: 5;
+	background-color: black;
+	color: white;
+	.btn-close {
+		top: 50%;
+		transform: translate(-50%, -50%);
+		background-color: white;
+		padding: .25rem;
+	}
 }
