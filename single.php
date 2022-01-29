@@ -55,18 +55,18 @@ while ( have_posts() ) :
 
 		<!-- post navigation -->
 		<?php
-			$starter_next = starter_get_svg( array( 'icon' => 'bi-chevron-right' ) );
-			$starter_prev = starter_get_svg( array( 'icon' => 'bi-chevron-left' ) );
+			// $starter_next = starter_get_svg( array( 'icon' => 'bi-chevron-right' ) );
+			// $starter_prev = starter_get_svg( array( 'icon' => 'bi-chevron-left' ) );
 
-			$starter_next_label     = esc_html__( 'Next post', 'starter' );
-			$starter_previous_label = esc_html__( 'Previous post', 'starter' );
+			// $starter_next_label     = esc_html__( 'Next post', 'starter' );
+			// $starter_previous_label = esc_html__( 'Previous post', 'starter' );
 
-			the_post_navigation(
-				array(
-					'next_text' => '<p class="meta-nav">' . $starter_next_label . $starter_next . '</p><p class="post-title">%title</p>',
-					'prev_text' => '<p class="meta-nav">' . $starter_prev . $starter_previous_label . '</p><p class="post-title">%title</p>',
-				)
-			);
+			// the_post_navigation(
+			// 	array(
+			// 		'next_text' => '<p class="meta-nav">' . $starter_next_label . $starter_next . '</p><p class="post-title">%title</p>',
+			// 		'prev_text' => '<p class="meta-nav">' . $starter_prev . $starter_previous_label . '</p><p class="post-title">%title</p>',
+			// 	)
+			// );
 		?>
 		<!-- END post navigation -->
 
