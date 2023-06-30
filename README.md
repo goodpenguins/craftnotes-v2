@@ -1,6 +1,6 @@
 # Craft Notes theme
 
-Starter WooCommerce theme
+Starter WooCommerce theme for the Craft Notes project
 
 
 
