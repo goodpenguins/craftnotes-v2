@@ -1,7 +1,6 @@
 # Craft Notes theme
 
-Starter WooCommerce theme, how it looks/works by default see here https://starter.rsdev.in/.  
-Open source, free to use - [MIT](https://choosealicense.com/licenses/mit/) license.
+Starter WooCommerce theme
 
 
 
